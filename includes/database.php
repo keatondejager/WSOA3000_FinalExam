@@ -31,7 +31,17 @@
     //Many of the SMS phrases are from memory or made up. If they aren't as you recall them, sorry.
     $sms_dictionary = array (
             array (array ("what are you doing", "what you doing", "would"), "wud"),
+            array (" an ", " a "),
+            array (" are ", " r "),
+            array ("give me", "gimme"),
+            array ("this", "dis"),
+            array ("i am", "i"),
+            array ("history", "a long time"),
+            array ("minute", "min"),
+            array ("this", "dat"),
             array (array ("what do you want to talk about", "what you want to talk about", "what you wanna talk about"), "wuwta"),
+            array ("another", "anuda"),
+            array ("person", "dude"),
             array ("though", "tho"),
             array (array ("through", "threw"), "thru"),
             array ("yeah", "ye"),
@@ -67,7 +77,7 @@
             array (array("family", "bro"), "fam"),
             array (" do ", " "),
             array ("above", "^^"), 
-            array ("2 much information", "tmi"),
+            array ("2 much in4mation", "tmi"),
             array ("address", "adr"),
             array ("because", "cuz"),
             array ("come on", "cmon"),
@@ -80,7 +90,9 @@
             array ("friend", "fnd"),
             array (" be ", " b "),
             array ("ready", "rdy"),
-            array ("know ", "no ")
+            array ("know ", "no "),
+            array ("ex", "x"),
+            array ("s ", "z ")
     );
     // Many of the posh phrases are from https://mentalfloss.com/article/53529/56-delightful-victorian-slang-terms-you-should-be-using
     $posh_dictionary = array (

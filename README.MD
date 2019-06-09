@@ -19,6 +19,12 @@ on [GitHub](https://github.com/keatondejager/WSOA3000_FinalExam.git).
 
 ## How the Site Works
 
+* The landing page is a simple screen where the user (you) can input a message and post it to a message board. 
+* The longer the message, the more followers it gains you. 
+* You can use your followers to buy Woolworths water, which increases your water level. 
+* If your water level reaches 0, you will start losing followers but only if your message is changed by the system (which does happen).
+* If your water level is above 100, then every change that the system makes will cost a decent amount of water but also result in a bigger boost in followers. 
+* Between 0 and 100 your follower gain depends on the length of the message but your water goes down by a similar amount and no changes will take place. 
 
 ### When translating to Posh English (100ml or more)
 
