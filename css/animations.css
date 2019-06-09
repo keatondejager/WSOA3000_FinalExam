@@ -1,0 +1,99 @@
+@keyframes hoverScale-1 {
+	0% {
+		transform: scale(1, 1);
+	}
+
+	100% {
+		transform: scale(1.01, 1.01);
+	}
+}
+
+@keyframes hoverScale-2 {
+	0% {
+		transform: scale(1, 1);
+	}
+
+	100% {
+		transform: scale(1.02, 1.02);
+	}
+}
+
+@keyframes hoverScale-3 {
+	0% {
+		transform: scale(1, 1);
+	}
+
+	100% {
+		transform: scale(1.03, 1.03);
+	}
+}
+
+@keyframes hoverScale-4 {
+	0% {
+		transform: scale(1, 1);
+	}
+
+	100% {
+		transform: scale(1.04, 1.04);
+	}
+}
+
+.scale-animation-1:hover {
+	cursor: pointer;
+	animation-name: hoverScale-1;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	animation-duration: 0.2s;
+}
+
+.scale-animation-2:hover {
+	cursor: pointer;
+	animation-name: hoverScale-2;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	animation-duration: 0.2s;
+}
+
+.scale-animation-3:hover {
+	cursor: pointer;
+	animation-name: hoverScale-3;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	animation-duration: 0.2s;
+}
+
+.scale-animation-4:hover {
+	cursor: pointer;
+	animation-name: hoverScale-4;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	animation-duration: 0.2s;
+}
+
+/* Like, Dislike and Share Button Animations */
+
+@keyframes ButtonAnim {
+	0% {
+		transform: scale(1, 1);
+		/* background-color: rgba(0, 0, 0, 0); */
+		opacity: 0.45;
+	}
+
+	100% {
+		transform: scale(1.03, 1.03);
+		/* background-color: rgba(82, 192, 255, 0.507); */
+		opacity: 1;
+	}
+}
+
+.button-animation {
+	opacity: 0.45;
+}
+
+.button-animation:hover {
+	cursor: pointer;
+	animation-name: ButtonAnim;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	animation-duration: 0.2s;
+}
