@@ -15,7 +15,7 @@
         } elseif (isset($_POST["still"])) {
             readStatus();
             if ($GLOBALS["net_worth"] >= 25) {
-                $GLOBALS["net_worth"] -= 25;
+                $GLOBALS["net_worth"] -= 25; 
                 $GLOBALS["water_level"] += 50;
             }
             writeStatus();

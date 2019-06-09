@@ -37,3 +37,9 @@ The translations are based on [Victorian Era Phrases](https://mentalfloss.com/ar
 ### When translating into SMS English (0ml)
 
 **These sentences translate into interesting results...**
+
+1. Even though you have to wait for tonight, I am sure it will be fun. 
+2. Five minutes is a long time for an intelligent person like yourself. 
+3. Do yourself a favour and try not to give too much information. 
+4. You are on another level, because come on bro, this is easy you know. 
+5. Get ready for what could be the most enjoyable night in history.
