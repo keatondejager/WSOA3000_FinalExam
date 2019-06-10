@@ -41,9 +41,30 @@
             
             $package = new Message($current_user, $message, strftime("%T"), $level);
             array_push($GLOBALS['all_messages'], $package);
+
+            $newMessages = rand(1, 8);
+            $options = readOtherMessages();
+            for ($i = 0; $i < $newMessages; $i++) {
+                $messageIndex = rand(0, sizeof($options));
+                $newmessage = new Message($options[$messageIndex][1], $options[$messageIndex][2], strftime("%T"), 0);
+                PostMessage($newmessage->GetMessage(), $newmessage->GetAuthor(), 0);
+                array_push($GLOBALS['all_messages'], $newmessage);
+            }
         }
     }
 
+    function readOtherMessages () {
+
+        $file = fopen("assets/data/otherMessages.csv", "r") or die ("Unable to open file!");
+            $options = array();
+            while (!feof($file)) {
+                array_push($options, fgetcsv($file));
+            }
+        fclose($file);
+
+        return $options;
+    }
+ 
     function test_input($data) { 
         $data = trim($data);
         $data = stripslashes($data);
