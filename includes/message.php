@@ -1,9 +1,16 @@
+<!--
+This file is used as a template for the messages.
+PHP is used to fill in the data dynamically allowing for better control
+and customization.
+-->
+
 
 <div class="row justify-content-start py-2">
 
     <div class="col-lg-10 col-md-10 col-sm-12 offset-lg-1 offset-md-1">
         <div class="card shadow-2 border-0" style="border-radius: 0;">
             <div class="card-header <?php 
+            //* This adds the class names to the message card to customize the color depending on the author of the message.
             if ($GLOBALS["current_user"] == $message->GetAuthor() ){
                 echo "author";
             } elseif ($message->GetAuthor() == "YouTube"){
@@ -21,6 +28,7 @@
                         <img class="img-thumbnail float-left profile-icon" src="assets/images/icons/avatar.png" alt="Icon">
                     </div>
                     <div class="col-lg-10 col-md-9">
+                        <!-- The PHP below is because the Woolworths color is dark and the only one that can't have dark text. -->
                         <h3 class="<?php if ($message->GetAuthor() == "Woolworths SA") {echo "text-white";} else {echo "text-dark";}?> profile-name" style="font-size:3vh;"><?php echo $message->GetAuthor(); ?></h3>
                         <p class="<?php if ($message->GetAuthor() == "Woolworths SA") {echo "text-white";} else {echo "text-dark";}?>"><?php echo $message->GetTime(); ?></p>
                     </div>

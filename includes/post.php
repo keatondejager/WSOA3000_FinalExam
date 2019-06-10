@@ -1,5 +1,8 @@
 
-
+<!-- This file contains the user input form and all functions that control it
+These functions are used to add user input to the content on the page
+These functions also validate the input to hopefully avoid XSS if the webpage is ever hosted
+-->
 <div class="py-3 mt-3 container-fluid author" id="message-board">
     <div class="container-fluid bg-faded">
         <a href="profile.php" class="row align-items-center">

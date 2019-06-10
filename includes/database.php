@@ -1,12 +1,15 @@
 <?php
-    
+    //? Initializing all data functionality needed for the website to function. 
+    //* Set the time zone.
     date_default_timezone_set("Africa/Harare");
 
 
     $messagesFile = fopen('assets/data/messages.csv', 'r');
     $firstMessage = new Message('Message Board Bot', 'This is the start of the message board');
     $all_messages = array ( $firstMessage );
+    //* ^^^ The message board always starts with this default message.
 
+    //? This loop reads in all messages from the csv file. This happens everytime the page is refreshed. There is probably a better way to do this.
     while (!feof($messagesFile)) {
             $line = fgetcsv($messagesFile);
             
@@ -18,6 +21,7 @@
 
     fclose($messagesFile);
     
+    //* Not used in the final version of the project but included as it was going to be used for something until plans changed.
     $admin = new User ('admin', '1234', 'Keaton', 'de Jager');
     
     //$admin->PostMessage("Hello, World!");
@@ -28,7 +32,7 @@
     );
 
     
-    //Many of the SMS phrases are from memory or made up. If they aren't as you recall them, sorry.
+    //? Many of the SMS phrases are from memory or made up. If they aren't as you recall them, sorry.
     $sms_dictionary = array (
             array (array ("what are you doing", "what you doing", "would"), "wud"),
             array (" an ", " a "),
@@ -94,7 +98,7 @@
             array ("ex", "x"),
             array ("s ", "z ")
     );
-    // Many of the posh phrases are from https://mentalfloss.com/article/53529/56-delightful-victorian-slang-terms-you-should-be-using
+    //? Many of the posh phrases are from https://mentalfloss.com/article/53529/56-delightful-victorian-slang-terms-you-should-be-using
     $posh_dictionary = array (
         array ("i love you", "I have immense levels of infatuation for thou'n existence."),
         array ("you need me", "thou doth require from me immediate"),
@@ -153,6 +157,7 @@
     );
 
 
+    //! CLASS DEFINTIONS: USER (NOT NEEDED) & MESSAGE (HOLDS MESSAGE DATA)
     class User {
         private $username, $password, $firstname, $surname;
 

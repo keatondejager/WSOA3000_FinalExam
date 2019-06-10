@@ -1,4 +1,5 @@
-    <!-- End of Content -->
+
+    <!-- End of Content - This is just to simplify all files as this is the foot of all files. -->
     <footer class="footer mt-auto py-0 fixed-bottom">
         <div class="container bg-inverse">
             <span class="text-muted">

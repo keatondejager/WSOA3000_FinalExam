@@ -3,6 +3,7 @@ define('TITLE', 'About | #WooliesWaterChallenge');
 include("includes/header.php"); 
 ?>
 
+<!-- A simply about page with information about the site -->
 
 <div class="container-fluid">
     <div class="row">

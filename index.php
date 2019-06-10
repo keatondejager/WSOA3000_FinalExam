@@ -4,6 +4,8 @@
 ?>
 
 <?php 
+
+    //? PHP handling post requests when the user buys water
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["sparkling"]) ) {
             readStatus();
@@ -48,8 +50,10 @@
                 <div class="row pre-scrollable">
                     <div class="col-10 offset-1">
                         <?php 
+                            //? Looping through all messages retrieved from the csv file and displaying them 
                             foreach (array_reverse($all_messages) as $message) {
                                 if ($message->hasContent()) {
+                                    //? Printing each message into the message board (only if they have content to not print blanks)
                                     include ("includes/message.php");
                                 }
                             }  
@@ -83,12 +87,13 @@
                     <div class="col-12 align-self-center">
                     <div class="card w-100 shadow-2-dark bg-dark" style="border-radius:0; height:18vh">
                             <div class="card-body">
-                                <strong><?php echo $GLOBALS["net_worth"] ?> Followers (&#9924;)</strong>
+                                <strong><?php echo $GLOBALS["net_worth"] ?> Followers (&#9924;)<!--Snowman Icon--></strong>
                                 <div class="progress my-1">
+                                <!-- In the PHP below, I am printing percentages to the width value as a percentage to display it in a scale across the screen-->
                                     <div class="progress-bar bg-primary text-dark" style="width: <?php echo ( ($GLOBALS["net_worth"]) / $GLOBALS["max_likes"] * 100)  ?>%" 
                                         role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <strong><?php echo $GLOBALS["water_level"] ?>ml (&#10052;)</strong>
+                                <strong><?php echo $GLOBALS["water_level"] ?>ml (&#10052;)<!--Snowflake Icon--></strong>
                                 <div class="progress my-1">
                                     <div class="progress-bar bg-dark text-white" style="width: <?php echo ($GLOBALS["water_level"] / $GLOBALS["max_water"] * 100) ?>%" 
                                         role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>

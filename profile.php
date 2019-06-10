@@ -1,6 +1,7 @@
 <?php 
 define('TITLE', 'Profile | #WooliesWaterChallenge');
-include ("includes/header.php"); 
+include ("includes/header.php");
+//This is a template that only shows one user because the multiple users idea was abandoned.  
 ?>
 
     <div class="container">

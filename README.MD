@@ -3,7 +3,11 @@ The #WooliesWaterChallenge.
 
 This website has been created with `PHP` to simplify certain parts of development. As such, the webpage must be hosted on a server. 
 To do this, a server must be hosted on the viewers machine. **NOTE:** This README is written in _Markdown_ and is meant to be viewed
-on [GitHub](https://github.com/keatondejager/WSOA3000_FinalExam.git).
+on [GitHub](https://github.com/keatondejager/WSOA3000_FinalExam.git). 
+
+This project was the first time I have ever used PHP and as a result there are probably a lot of problems and bad solutions to how I have done things.
+There is also only one plugin. The reason for this is explained in the reflection document in more detail but from a technical aspect, I did not know how to 
+mix javascript and PHP more than the minute jQuery I have used (which probably should have been done with PHP as it would have been easier and made more sense). 
 
 ## Steps to Host the Webpage.
 

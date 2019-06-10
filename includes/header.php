@@ -43,4 +43,4 @@
         </div>
        
     </nav>
-    <!-- Start of Content -->
+    <!-- Start of Content - THis file simplifys all other files by reducing repetition of the head section -->
