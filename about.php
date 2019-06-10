@@ -37,7 +37,7 @@ include("includes/header.php");
                                         <p>This webpage is my response to the #WooliesWaterChallenge trend. It is a mix of satirical commentary as well as an exploration into
                                             the concept of cyber-imperialism.
                                         </p>
-                                        <p>The source code for this project is available on <a class="text-info font-weight-bold blockquote" href="#">GitHub</a></p>
+                                        <p>The source code for this project is available on <a class="text-info font-weight-bold blockquote" href="https://github.com/keatondejager/WSOA3000_FinalExam">GitHub</a></p>
                                     </div>
                                 </div>
                             </div>
