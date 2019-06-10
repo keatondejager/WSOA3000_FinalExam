@@ -6,17 +6,25 @@
             <div class="card-header <?php 
             if ($GLOBALS["current_user"] == $message->GetAuthor() ){
                 echo "author";
+            } elseif ($message->GetAuthor() == "YouTube"){
+                echo "bg-danger";
+            } elseif ($message->GetAuthor() == "Donald J. Trump"){
+                echo "bg-primary";
+            } elseif ($message->GetAuthor() == "EA Games") {
+                echo "bg-success";
+            } elseif ($message->GetAuthor() == "Woolworths SA") {
+                echo "bg-dark";
             }
             ?>">
-                <a href=<?php echo"\"#\"" ?> class="row align-items-center scale-animation-2">
+                <div class="row align-items-center">
                     <div class="col-lg-1 col-md-2">
                         <img class="img-thumbnail float-left profile-icon" src="assets/images/icons/avatar.png" alt="Icon">
                     </div>
                     <div class="col-lg-10 col-md-9">
-                        <h3 class="text-muted profile-name" style="font-size:3vh;"><?php echo $message->GetAuthor(); ?></h3>
-                        <p class="text-muted"><?php echo $message->GetTime(); ?></p>
+                        <h3 class="<?php if ($message->GetAuthor() == "Woolworths SA") {echo "text-white";} else {echo "text-dark";}?> profile-name" style="font-size:3vh;"><?php echo $message->GetAuthor(); ?></h3>
+                        <p class="<?php if ($message->GetAuthor() == "Woolworths SA") {echo "text-white";} else {echo "text-dark";}?>"><?php echo $message->GetTime(); ?></p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="card-body">
                 <div class="container">

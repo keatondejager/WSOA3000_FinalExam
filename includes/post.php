@@ -28,20 +28,6 @@
             return;
         } else {
 
-            $message = Translate($message);
-            $level = 0;
-            if ($GLOBALS["water_level"] == 0) {
-                $level = -1;
-            } elseif ($GLOBALS["water_level"] > 100) {
-                $level = 1;
-            } 
-            PostMessage($message, $current_user, $level);
-
-            writeStatus();
-            
-            $package = new Message($current_user, $message, strftime("%T"), $level);
-            array_push($GLOBALS['all_messages'], $package);
-
             $newMessages = rand(1, 8);
             $options = readOtherMessages();
             for ($i = 0; $i < $newMessages; $i++) {
@@ -50,6 +36,24 @@
                 PostMessage($newmessage->GetMessage(), $newmessage->GetAuthor(), 0);
                 array_push($GLOBALS['all_messages'], $newmessage);
             }
+
+            $message = Translate($message);
+            $level = 0;
+
+            if ($GLOBALS["water_level"] <= 0) {
+                $level = -1;
+            } elseif ($GLOBALS["water_level"] > 100) {
+                $level = 1;
+            } 
+
+            PostMessage($message, $current_user, $level);
+
+            writeStatus();
+            
+            $package = new Message($current_user, $message, strftime("%T"), $level);
+            array_push($GLOBALS['all_messages'], $package);
+
+            
         }
     }
 
@@ -74,7 +78,7 @@
 
     function Translate ($original) {
 
-        if ($GLOBALS["water_level"] == 0) {
+        if ($GLOBALS["water_level"] <= 0) {
             $original = strtolower($original);
             $original = str_replace(array(".", ","), "", $original);
 
